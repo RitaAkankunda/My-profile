@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,12 +41,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900">
       {/* Hero Section */}
       <section className="relative px-6 py-20 text-center">
         <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 p-1">
               <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
                 <span className="text-4xl font-bold text-white">RA</span>
               </div>
@@ -53,7 +54,7 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
               Rita Akankunda
             </h1>
-            <p className="text-xl md:text-2xl text-purple-300 mb-8">
+            <p className="text-xl md:text-2xl text-cyan-300 mb-8">
               Computer Science Student & Aspiring Developer
             </p>
           </div>
@@ -64,13 +65,13 @@ const Index = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3">
+            <Button asChild className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 shadow-lg">
               <a href="https://github.com/RitaAkankunda" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 View GitHub
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white px-8 py-3">
+            <Button asChild variant="outline" className="border-cyan-400 text-cyan-300 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white px-8 py-3 hover:border-transparent">
               <a href="https://www.linkedin.com/in/rita-akankunda-733563350" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 Connect on LinkedIn
@@ -100,13 +101,13 @@ const Index = () => {
               </p>
             </div>
             <div className="space-y-4">
-              <div className="bg-slate-700/50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-purple-300 mb-2">Education</h3>
+              <div className="bg-gradient-to-r from-blue-800/30 to-teal-800/30 p-6 rounded-lg border border-cyan-500/20">
+                <h3 className="text-xl font-semibold text-cyan-300 mb-2">Education</h3>
                 <p className="text-gray-300">Computer Science Student</p>
                 <p className="text-gray-400 text-sm">Focused on software development and algorithms</p>
               </div>
-              <div className="bg-slate-700/50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-purple-300 mb-2">Interests</h3>
+              <div className="bg-gradient-to-r from-teal-800/30 to-emerald-800/30 p-6 rounded-lg border border-emerald-500/20">
+                <h3 className="text-xl font-semibold text-emerald-300 mb-2">Interests</h3>
                 <p className="text-gray-300">Web Development, Problem Solving, Open Source</p>
               </div>
             </div>
@@ -122,15 +123,15 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
-              <Card key={skill.name} className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 transition-all duration-300">
+              <Card key={skill.name} className="bg-gradient-to-br from-slate-800/80 to-blue-900/40 border-cyan-500/30 hover:from-slate-700/80 hover:to-blue-800/60 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <skill.icon className="h-8 w-8 text-purple-400 mr-3" />
+                    <skill.icon className="h-8 w-8 text-cyan-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
                   </div>
                   <div className="w-full bg-slate-700 rounded-full h-2">
                     <div 
-                      className="h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000"
+                      className="h-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-emerald-500 rounded-full transition-all duration-1000"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -150,7 +151,7 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-teal-900/40 border-emerald-500/30 hover:from-slate-700/80 hover:to-teal-800/60 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-xl text-white">{project.title}</CardTitle>
                   <CardDescription className="text-gray-300">
@@ -162,13 +163,13 @@ const Index = () => {
                     {project.tech.map((tech) => (
                       <span 
                         key={tech}
-                        className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm"
+                        className="px-3 py-1 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 text-cyan-300 rounded-full text-sm border border-cyan-500/30"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <Button asChild variant="outline" className="w-full border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white">
+                  <Button asChild variant="outline" className="w-full border-emerald-400 text-emerald-300 hover:bg-gradient-to-r hover:from-emerald-600 hover:to-teal-600 hover:text-white hover:border-transparent">
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Project
@@ -191,19 +192,19 @@ const Index = () => {
             I'm always interested in connecting with fellow developers, students, and tech enthusiasts.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Button asChild size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
+            <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-lg">
               <a href="https://github.com/RitaAkankunda" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white">
+            <Button asChild size="lg" variant="outline" className="border-cyan-400 text-cyan-300 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white hover:border-transparent">
               <a href="https://www.linkedin.com/in/rita-akankunda-733563350" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white">
+            <Button asChild size="lg" variant="outline" className="border-emerald-400 text-emerald-300 hover:bg-gradient-to-r hover:from-emerald-600 hover:to-teal-600 hover:text-white hover:border-transparent">
               <a href="mailto:rita.akankunda@example.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Email
@@ -214,7 +215,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-8 bg-slate-900 text-center">
+      <footer className="px-6 py-8 bg-slate-900 text-center border-t border-cyan-500/20">
         <p className="text-gray-400">
           © 2024 Rita Akankunda. Built with passion and modern web technologies.
         </p>
