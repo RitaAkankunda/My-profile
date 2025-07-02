@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,8 +36,7 @@ const Index = () => {
     { name: "Python", icon: Code, level: 80 },
     { name: "React", icon: Globe, level: 75 },
     { name: "HTML/CSS", icon: Globe, level: 90 },
-    { name: "Git", icon: Database, level: 80 },
-    { name: "Algorithms", icon: Cpu, level: 75 }
+    { name: "Git", icon: Database, level: 80 }
   ];
 
   return (
